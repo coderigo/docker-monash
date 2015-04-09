@@ -1,0 +1,8 @@
+node2:
+    build: ./
+    hostname: node2.mpimultihost
+node1:
+    image: mpimultihost_node2
+    hostname: node1.mpimultihost
+    links:
+        - node2
