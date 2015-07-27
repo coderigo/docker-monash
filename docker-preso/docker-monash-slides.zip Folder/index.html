@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>coderigo-docker</title>
+
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="Hakim El Hattab">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/coderigo.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+        <script>
+            if( window.location.search.match( /print-pdf/gi ) ) {
+                var link = document.createElement( 'link' );
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'css/print/pdf.css';
+                document.getElementsByTagName( 'head' )[0].appendChild( link );
+            }
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal"> <!-- Start reveal -->
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides"> <!-- Start slides -->
+
+            <!-- Slide 1 - Title -->
+            <section>
+                <section>
+                    <div>
+                        <img src="images/small_h-trans.png" class="coderigo-img"></img>
+                        <div>Distributed apps with batteries </br> <em class="coderigo-emphasis coderigo-subtitle-smooth">(env and deps)</em> included.</div>
+                    </div>
+                    <blockquote></blockquote>
+                    <blockquote>
+                        <p class="coderigo-subtitle">Rodrigo Martell</p></br>
+                        <p class="coderigo-emphasis coderigo-subtitle">Apr 2015</p>
+                    </blockquote>
+                    <img class="coderigo-gravatar" src="images/coderigo_gravatar.png"></img>
+                </section>
+                <section>
+                    <img class="coderigo-img" style="max-width:20%" src="images/zetaris-logo-2015.png"></img>
+                </section>
+            </section>
+
+            <!-- Slide 2 - Docker vs VM -->
+            <section>
+                <section>
+                    <div>
+                        <h3>Docker != VM</h3>
+                        <div class="coderigo-subtitle-smooth">Think VM, but lighter and focused.</div>
+                    </div>
+                    <div>
+                        <ul class="coderigo-ul-pos-neg coderigo-col-split">
+                            <li class="fragment" data-fragment-index="0">
+                                <div class="coderigo-col coderigo-col-left">
+                                    <img class="coderigo-img-half" src="images/vm-basic.png" alt="Docker architecture" width="200px">
+                                </div>
+                            </li>
+                            <li class="fragment" data-fragment-index="1">
+                                <div class="coderigo-col coderigo-col-left">
+                                    <img class="coderigo-img-half" src="images/docker-basic.png" alt="Docker architecture" width="200px">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="coderigo-ul-pos-neg coderigo-col-split">
+                            <li class="fragment" data-fragment-index="2">
+                                <div class="coderigo-col coderigo-col-left">
+                                    <span class="coderigo-negative">-</span> Heavy (GBs)
+                                </div>
+                                <div class="coderigo-col coderigo-col-right">
+                                    <span class="coderigo-positive">+</span> Lightweight (MBs)
+                                </div>
+                            </li>
+                            <li class="fragment" data-fragment-index="3">
+                                <div class="coderigo-col coderigo-col-left">
+                                    <span class="coderigo-negative">-</span> Slow start (mins)
+                                </div>
+                                <div class="coderigo-col coderigo-col-right">
+                                    <span class="coderigo-positive">+</span> Quick start (secs)
+                                </div>
+                            </li>
+                            <li class="fragment" data-fragment-index="4">
+                                <div class="coderigo-col coderigo-col-left">
+                                    <span class="coderigo-negative">-</span> Not so portable
+                                </div>
+                                <div class="coderigo-col coderigo-col-right">
+                                    <span class="coderigo-positive">+</span> Pretty portable
+                                </div>
+                            </li>
+                            <li class="fragment" data-fragment-index="5">
+                                <div class="coderigo-col coderigo-col-left">
+                                    <span class="coderigo-negative">-</span> Pseudo-inheritance hard.
+                                </div>
+                                <div class="coderigo-col coderigo-col-right">
+                                    <span class="coderigo-positive">+</span> Pseudo-inheritance baked-in.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <div>
+                        <div>
+                            <h3>Docker != VM</h3>
+                            <div class="coderigo-subtitle-smooth">Non-LXC stack (OS X, Windoze).</div>
+                        </div>
+                        <div>
+                            <img style="width: 50%" class="coderigo-img" src="images/docker-basic-nonlinux.png" alt="Docker architecture" height="">
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Slide 4 - Arch second go -->
+            <section>
+                <section>
+                    <div>
+                        <h3>Start to finish</h3>
+                        <div class="coderigo-subtitle-smooth">Quick start in one diagram!</div>
+                    </div>
+                    <div>
+                        <img class="coderigo-img-half" src="images/start-to-finish-quick/step1.png" alt="Docker architecture" width="200px">
+                    </div>
+                </section>
+                <section>
+                    <div>
+                        <img class="coderigo-img-half" src="images/start-to-finish-quick/step2.png" alt="Docker architecture" width="200px">
+                    </div>
+                </section>
+                <section>
+                    <div>
+                        <img class="coderigo-img-half" src="images/start-to-finish-quick/step3.png" alt="Docker architecture" width="200px">
+                    </div>
+                </section>
+                <section>
+                    <div>
+                        <img class="coderigo-img-half" src="images/start-to-finish-quick/step4.png" alt="Docker architecture" width="200px">
+                    </div>
+                </section>
+                <section>
+                    <div>
+                        <img class="coderigo-img-half" src="images/start-to-finish-quick/step5.png" alt="Docker architecture" width="200px">
+                    </div>
+                </section>
+            </section>
+
+            <!-- Slide 5 - Arch second go -->
+            <section>
+                <section>
+                    <div>
+                        <h3>Start to finish</h3>
+                        <div class="coderigo-subtitle-smooth">Cook your own in one diagram!</div>
+                    </div>
+                    <div>
+                        <img class="coderigo-img-half" src="images/start-to-finish-custom/step1.png" alt="Docker architecture" width="200px">
+                    </div>
+                </section>
+                <section>
+                    <div>
+                        <img class="coderigo-img-half" src="images/start-to-finish-custom/step2.png" alt="Docker architecture" width="200px">
+                    </div>
+                </section>
+                <section>
+                    <div>
+                        <img class="coderigo-img-half" src="images/start-to-finish-custom/step3.png" alt="Docker architecture" width="200px">
+                    </div>
+                </section>
+            </section>
+
+            <!-- Slide 5 - Arch third go -->
+            <section>
+                <section>
+                    <div>
+                        <h3>Networking</h3>
+                        <div class="coderigo-subtitle-smooth">(Local)</div>
+                    </div>
+                    <div>
+                        <img class="coderigo-img-half" src="images/networking/step1.png" alt="Docker architecture" width="200px">
+                    </div>
+                </section>
+                <section>
+                    <div>
+                        <img class="coderigo-img-half" src="images/networking/step2.png" alt="Docker architecture" width="200px">
+                    </div>
+                </section>
+                <section>
+                    <div>
+                        <img class="coderigo-img-half" src="images/networking/step3.png" alt="Docker architecture" width="200px">
+                    </div>
+                </section>
+            </section>
+
+            <!-- Slide 5 - Arch third go -->
+            <section>
+                <section>
+                    <div>
+                        <h3>Networking</h3>
+                        <div class="coderigo-subtitle-smooth">(Multiple hosts)</div>
+                    </div>
+                    <img class="coderigo-img" src="images/docker-networking-advanced.png" alt="Docker networking">
+                </section>
+            </section>
+
+            <!-- Slide 5 - Arch third go -->
+            <section>
+                <div>
+                    <h3>Example time!</h3>
+                    <div class="coderigo-subtitle-smooth">Switch to terminal</div>
+                </div>
+                <div>
+                    <p>All examples and code available at: </br> <a href="https://github.com/coderigo/docker-monash" target="_blank">github.com/coderigo/docker-monash</a></p>
+                </div>
+                <div></br>
+                    <ol>
+                        <li>Nginx web server</li></br>
+                        <li>Single node MPI programs : Hello world and MatMult</li></br>
+                        <li>Multi node MPI programs : Hello world and MatMult</li></br>
+                        <li>ZHDP: Zetaris Hadoop distro using Docker under the hood</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Slide Last - Contact details -->
+            <section>
+                <div>
+                    <h3>References and more learning</h3>
+                    <blockquote></blockquote>
+                </div>
+                <div></br>
+                    <ol>
+                        <li><a href="https://docs.docker.com/machine/" target="_blank">Docker Machine</a> Create and fire off commands on Docker hosts from your local machine anywhere (cloud, local machine, etc).</li>
+
+                        <li><a href="https://docs.docker.com/swarm/" target="_blank">Docker Swarm</a>. Native clustering for Docker.</li>
+
+                        <li><a href="https://serfdom.io/" target="_blank">Serf</a>. Cluster self-awareness and event handler. Not part of Docker but useful and interesting to play with.</li>
+
+                        <li><a href="https://github.com/zettio/weave" target="_blank">Weave</a>. Virtual networking of containers running anywhere (multiple hosts, clouds, etc). Very handy.</li>
+
+                        <li><a href="https://docker.com" target="_blank">Docker</a>. THE official site. Full of resources and docs. Great and getting better.</li>
+
+                        <li><strong class="coderigo-subtitle-smooth">Patience</strong>. As with any new tool, there are kinks and things that are hard to get one's head around initially. So a bit of patience and reading glasses is good to have on tap.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Slide Last - Contact details -->
+            <section>
+                <div>
+                    <h3>Code & Slides</h3>
+                    <blockquote></blockquote>
+                    <p class="coderigo-subtitle-smooth"><a href="https://github.com/coderigo/docker-monash" target="_blank">github.com/coderigo/docker-monash</a></p></br>
+                </div>
+                <div>
+                    <h3>Reach out</h3>
+                    <img class="coderigo-gravatar" src="images/coderigo_gravatar.png"></img>
+                </div>
+                <blockquote></blockquote>
+                <blockquote>
+                    <p class="coderigo-subtitle-smooth"><a href="https://github.com/coderigo" target="_blank"><i class="fa fa-github-square fa-2x"></i>github.com/coderigo</a></p>
+                    <p class="coderigo-subtitle-smooth"><a href="http://au.linkedin.com/in/rodrigomartell/" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i>au.linkedin.com/in/rodrigomartell</a></p>
+                    <p class="coderigo-subtitle-smooth"><a href="https://twitter.com/coderigo" target="_blank"><i class="fa fa-twitter fa-2x"></i>twitter.com/coderigo</a></p>
+                    <p class="coderigo-subtitle-smooth"><a href="http://stackexchange.com/users/1673426/rodrigomartell" target="_blank"><i class="fa fa-stack-overflow fa-2x"></i>stackexchange.com/users/1673426/rodrigomartell</a></p>
+                    <p class="coderigo-subtitle-smooth"><a href="https://plus.google.com/116323328945131755492/posts" target="_blank"><i class="fa fa-google-plus-square fa-2x"></i>rodrigo.martell<em> [ye olde at sign] </em>gmail.com</a></p>
+                </blockquote>
+            </section>
+
+            </div> <!-- End slides -->
+
+        </div> <!-- End reveal -->
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Parallax scrolling
+                // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                // parallaxBackgroundSize: '2100px 900px',
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+
+    </body>
+</html>

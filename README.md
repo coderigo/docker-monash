@@ -5,6 +5,8 @@ This repo contains slides and examples of a short talk given in April at classes
 - [FIT3143 - Parallel computing](http://www.monash.edu.au/pubs/handbooks/units/FIT3143.html); and 
 - [FIT5139 - Advanced distributed and parallel systems](http://www.monash.edu.au/pubs/handbooks/units/FIT5139.html).
 
+It also was presented and made available at the [MLBootcamp](http://mlbootcamp.org/) in August 2015.
+
 The slides are in the [docker-preso](docker-preso) directory and the examples are in the [docker-examples](docker-examples) directory.
 
 Browse around there for more info.

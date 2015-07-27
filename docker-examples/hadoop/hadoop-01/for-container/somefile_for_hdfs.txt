@@ -1,0 +1,8 @@
+This is a text file
+destined for HDFS.
+It started its
+life on the docker
+host, made its way
+into the container
+at runtime and now
+lives inside HDFS!
