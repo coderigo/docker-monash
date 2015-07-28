@@ -16,6 +16,11 @@ The above command will start a container and start hadoop within it. Once set up
 
 Once finished, you can simply type `exit` to exit the container and stop and remove the container with `docker stop hadoop-01 && docker rm hadoop-01`
 
+## If the above commands have already been executed and hadoop-01 setup then
+ docker start hadoop-01
+ docker attach hadoop-01
+is sufficient
+ 
 ## Running the lab examples
 
 Inside the container, you can run the lab commands by running the shell script in `/tmp/from-container-host/lab_commands.sh`. Alternatively, you can play around and do it yourself, remembering that HDFS is installed in `/usr/local/hadoop/bin/hdfs`.

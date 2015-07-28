@@ -18,6 +18,7 @@ $HADOOP com.sun.tools.javac.Main WordCount.java
 jar cf wc.jar WordCount*.class
 
 # Copy the example files into hdfs
+$HDFS -mkdir /user/hduser/lab2/wordcount/input
 $HDFS -put file* /user/hduser/lab2/wordcount/input
 
 # Run the application
