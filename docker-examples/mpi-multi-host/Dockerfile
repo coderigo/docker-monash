@@ -2,7 +2,7 @@
 # based on : http://www.geodict.com/mpich2Linux.php?lang=en
 #
 # Build the image with:
-#   docker-compse build
+#   docker-compose build
 # 
 # Run the application with:
 #   docker-compose up
